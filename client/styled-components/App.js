@@ -84,8 +84,8 @@ const Tab = styled.button`
   font-size: 13px;
   font-weight: bold;
   padding: 0;
-  margin-left: 10px
-  margin-right: 10px
+  margin-left: 15px
+  margin-right: 15px
   border: none;
   background: none;
   :hover {

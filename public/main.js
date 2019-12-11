@@ -126,8 +126,8 @@ function l(){for(var e=0,t=0,n=arguments.length;t<n;t++)e+=arguments[t].length;v
   font-size: 13px;
   font-weight: bold;
   padding: 0;
-  margin-left: 10px
-  margin-right: 10px
+  margin-left: 15px
+  margin-right: 15px
   border: none;
   background: none;
   :hover {

@@ -1,0 +1,43 @@
+{
+  "name": "Robinhood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack -w -g --mode=development",
+    "start": "nodemon server/server.js",
+    "start:1": "nodemon Robinhood-Graph/server/server.js",
+    "start:2": "nodemon Robinhood-About/server/server.js",
+    "start:3": "nodemon Robinhood-AnalystRatings/server/server.js",
+    "start:4": "nodemon Robinhood-Earnings/server/server.js",
+    "start:5": "nodemon Robinhood-News/server/server.js",
+    "start:6": "nodemon Robinhood-TradeStock/server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AstonKhor/Robinhood.git"
+  },
+  "keywords": [],
+  "author": "Aston Khor <khoraston@gmail.com> (NA)",
+  "license": "Aston",
+  "bugs": {
+    "url": "https://github.com/AstonKhor/Robinhood/issues"
+  },
+  "homepage": "https://github.com/AstonKhor/Robinhood#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/preset-react": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "express": "^4.17.1",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "nodemon": "^2.0.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "styled-components": "^4.4.1",
+    "webpack": "^4.41.2"
+  }
+}

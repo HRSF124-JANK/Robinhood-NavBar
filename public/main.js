@@ -53,13 +53,28 @@ function l(){for(var e=0,t=0,n=arguments.length;t<n;t++)e+=arguments[t].length;v
  */Object.defineProperty(t,"__esModule",{value:!0});var r="function"==typeof Symbol&&Symbol.for,a=r?Symbol.for("react.element"):60103,o=r?Symbol.for("react.portal"):60106,i=r?Symbol.for("react.fragment"):60107,l=r?Symbol.for("react.strict_mode"):60108,u=r?Symbol.for("react.profiler"):60114,c=r?Symbol.for("react.provider"):60109,s=r?Symbol.for("react.context"):60110,f=r?Symbol.for("react.async_mode"):60111,d=r?Symbol.for("react.concurrent_mode"):60111,p=r?Symbol.for("react.forward_ref"):60112,h=r?Symbol.for("react.suspense"):60113,m=r?Symbol.for("react.suspense_list"):60120,y=r?Symbol.for("react.memo"):60115,g=r?Symbol.for("react.lazy"):60116,v=r?Symbol.for("react.fundamental"):60117,b=r?Symbol.for("react.responder"):60118,w=r?Symbol.for("react.scope"):60119;function k(e){if("object"==typeof e&&null!==e){var t=e.$$typeof;switch(t){case a:switch(e=e.type){case f:case d:case i:case u:case l:case h:return e;default:switch(e=e&&e.$$typeof){case s:case p:case g:case y:case c:return e;default:return t}}case o:return t}}}function x(e){return k(e)===d}t.typeOf=k,t.AsyncMode=f,t.ConcurrentMode=d,t.ContextConsumer=s,t.ContextProvider=c,t.Element=a,t.ForwardRef=p,t.Fragment=i,t.Lazy=g,t.Memo=y,t.Portal=o,t.Profiler=u,t.StrictMode=l,t.Suspense=h,t.isValidElementType=function(e){return"string"==typeof e||"function"==typeof e||e===i||e===d||e===u||e===l||e===h||e===m||"object"==typeof e&&null!==e&&(e.$$typeof===g||e.$$typeof===y||e.$$typeof===c||e.$$typeof===s||e.$$typeof===p||e.$$typeof===v||e.$$typeof===b||e.$$typeof===w)},t.isAsyncMode=function(e){return x(e)||k(e)===f},t.isConcurrentMode=x,t.isContextConsumer=function(e){return k(e)===s},t.isContextProvider=function(e){return k(e)===c},t.isElement=function(e){return"object"==typeof e&&null!==e&&e.$$typeof===a},t.isForwardRef=function(e){return k(e)===p},t.isFragment=function(e){return k(e)===i},t.isLazy=function(e){return k(e)===g},t.isMemo=function(e){return k(e)===y},t.isPortal=function(e){return k(e)===o},t.isProfiler=function(e){return k(e)===u},t.isStrictMode=function(e){return k(e)===l},t.isSuspense=function(e){return k(e)===h}},function(e,t,n){e.exports=n(18)()},function(e,t,n){"use strict";var r=n(19);function a(){}function o(){}o.resetWarningCache=a,e.exports=function(){function e(e,t,n,a,o,i){if(i!==r){var l=new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");throw l.name="Invariant Violation",l}}function t(){return e}e.isRequired=e;var n={array:e,bool:e,func:e,number:e,object:e,string:e,symbol:e,any:e,arrayOf:t,element:e,elementType:e,instanceOf:t,node:e,objectOf:t,oneOf:t,oneOfType:t,shape:t,exact:t,checkPropTypes:o,resetWarningCache:a};return n.PropTypes=n,n}},function(e,t,n){"use strict";e.exports="SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"},function(e,t,n){"use strict";n.r(t);var r=n(0),a=n.n(r),o=n(6),i=n.n(o),l=n(1);const u=l.a.div`
   width: 100%;
   height: 64px;
+  position:fixed;
   background: #1b1b1d;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 `,c=l.a.div`
-  background: blue
+  margin-left: 50px;
+  width: 100px;
+  height: 40px;
+  background-image: url('navbar/img/robinhood-off-dark.png');
+  background-size: 33px 33px;
+  background-position: 5% 50%;
+  background-repeat: no-repeat;
+  outline: none !important;
+  :hover {
+    background-image: url('navbar/img/robinhood-on-dark.png');
+    background-size: 33px 33px;
+  background-position: 5% 50%;
+  background-repeat: no-repeat;
+  outline: none !important;
+  }
 `,s=l.a.div`
   margin-right: 100px;
   border: black;
@@ -74,7 +89,7 @@ function l(){for(var e=0,t=0,n=arguments.length;t<n;t++)e+=arguments[t].length;v
   background-color: #1b1b1d;
   border: none;
   color:  #8c8c8e;
-  background-image: url('navbar/img/search-grey.png');
+  background-image: url('navbar/img/search-off-dark.png');
   background-size: 20px 20px;
   background-position: 5% 50%;
   padding-left: 62px;
@@ -85,7 +100,7 @@ function l(){for(var e=0,t=0,n=arguments.length;t<n;t++)e+=arguments[t].length;v
       color: white;
     }
     color: white;
-    background-image: url('navbar/img/search-white.png');
+    background-image: url('navbar/img/search-on-dark.png');
     background-size: 20px 20px;
     background-position: 5% 50%;
     background-repeat: no-repeat;
@@ -96,19 +111,17 @@ function l(){for(var e=0,t=0,n=arguments.length;t<n;t++)e+=arguments[t].length;v
       color: white;
     }
     color: white;
-    background-image: url('navbar/img/search-white.png');
+    background-image: url('navbar/img/search-on-dark.png');
     background-size: 20px 20px;
     background-position: 5% 50%;
     background-repeat: no-repeat;
     outline: none !important;
   }
 `,d=l.a.div`
-  
-
-`,p=l.a.div`
   display: flex;
   justify-content: space-between;
-`,h=l.a.button`
+  margin-right: 35px;
+`,p=l.a.button`
   color: white;
   font-size: 13px;
   font-weight: bold;
@@ -120,4 +133,4 @@ function l(){for(var e=0,t=0,n=arguments.length;t<n;t++)e+=arguments[t].length;v
   :hover {
     color: #21ce99;
   }
-`;function m(e){return(m="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e})(e)}function y(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}function g(e,t){return!t||"object"!==m(t)&&"function"!=typeof t?function(e){if(void 0===e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return e}(e):t}function v(e){return(v=Object.setPrototypeOf?Object.getPrototypeOf:function(e){return e.__proto__||Object.getPrototypeOf(e)})(e)}function b(e,t){return(b=Object.setPrototypeOf||function(e,t){return e.__proto__=t,e})(e,t)}var w=function(e){function t(e){return function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,t),g(this,v(t).call(this,e))}var n,r,o;return function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function");e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,writable:!0,configurable:!0}}),t&&b(e,t)}(t,e),n=t,(r=[{key:"render",value:function(){return a.a.createElement(u,null,"Logo",a.a.createElement(c,null),a.a.createElement(s,null,a.a.createElement(d,null),a.a.createElement(f,{type:"text",placeholder:"Search"})),a.a.createElement(p,null,a.a.createElement(h,null,"Free Stock"),a.a.createElement(h,null,"Portfolio"),a.a.createElement(h,null,"Cash"),a.a.createElement(h,null,"Messages"),a.a.createElement(h,null,"Account")))}}])&&y(n.prototype,r),o&&y(n,o),t}(a.a.Component);i.a.render(a.a.createElement(w,null),document.getElementById("Navbar"))}]);
+`;function h(e){return(h="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e})(e)}function m(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}function y(e,t){return!t||"object"!==h(t)&&"function"!=typeof t?function(e){if(void 0===e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return e}(e):t}function g(e){return(g=Object.setPrototypeOf?Object.getPrototypeOf:function(e){return e.__proto__||Object.getPrototypeOf(e)})(e)}function v(e,t){return(v=Object.setPrototypeOf||function(e,t){return e.__proto__=t,e})(e,t)}var b=function(e){function t(e){return function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,t),y(this,g(t).call(this,e))}var n,r,o;return function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function");e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,writable:!0,configurable:!0}}),t&&v(e,t)}(t,e),n=t,(r=[{key:"render",value:function(){return a.a.createElement(u,null,a.a.createElement(c,null),a.a.createElement(s,null,a.a.createElement(f,{type:"text",placeholder:"Search"})),a.a.createElement(d,null,a.a.createElement(p,null,"Free Stock"),a.a.createElement(p,null,"Portfolio"),a.a.createElement(p,null,"Cash"),a.a.createElement(p,null,"Messages"),a.a.createElement(p,null,"Account")))}}])&&m(n.prototype,r),o&&m(n,o),t}(a.a.Component);i.a.render(a.a.createElement(b,null),document.getElementById("Navbar"))}]);

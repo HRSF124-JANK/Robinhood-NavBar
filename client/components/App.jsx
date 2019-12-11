@@ -1,5 +1,5 @@
 import React from 'react';
-import { WrapperApp, Logo, SearchContainer, SearchInput, SearchImage, TabsContainer, Tab } from '../styled-components/App.js';
+import { WrapperApp, Logo, SearchContainer, SearchInput, TabsContainer, Tab } from '../styled-components/App.js';
 
 class App extends React.Component {
   constructor(props) {
@@ -9,10 +9,8 @@ class App extends React.Component {
   render() {
     return (
       <WrapperApp>
-        Logo
-        <Logo/>
+        <Logo></Logo>
         <SearchContainer>
-          <SearchImage></SearchImage>
           <SearchInput type="text" placeholder="Search"></SearchInput>
         </SearchContainer>
         <TabsContainer>

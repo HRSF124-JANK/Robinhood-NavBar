@@ -1,30 +1,25 @@
 {
-  "name": "Robinhood",
+  "name": "Robinhood-Navbar",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack -w -g --mode=development",
+    "build": "webpack -w -g --mode=production",
     "start": "nodemon server/server.js",
-    "start:1": "nodemon Robinhood-Graph/server/server.js",
-    "start:2": "nodemon Robinhood-About/server/server.js",
-    "start:3": "nodemon Robinhood-AnalystRatings/server/server.js",
-    "start:4": "nodemon Robinhood-Earnings/server/server.js",
-    "start:5": "nodemon Robinhood-News/server/server.js",
-    "start:6": "nodemon Robinhood-TradeStock/server/server.js"
+    "start:docker": "node server/server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AstonKhor/Robinhood.git"
+    "url": "git+https://github.com/hrsf124-JANK/Robinhood-Navbar.git"
   },
   "keywords": [],
   "author": "Aston Khor <khoraston@gmail.com> (NA)",
   "license": "Aston",
   "bugs": {
-    "url": "https://github.com/AstonKhor/Robinhood/issues"
+    "url": "https://github.com/hrsf124-JANK/Robinhood-Navbar/issues"
   },
-  "homepage": "https://github.com/AstonKhor/Robinhood#readme",
+  "homepage": "https://github.com/hrsf124-JANK/Robinhood-Navbar#readme",
   "devDependencies": {
     "@babel/core": "^7.7.5",
     "@babel/preset-env": "^7.7.6",

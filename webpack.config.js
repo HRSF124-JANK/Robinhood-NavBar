@@ -5,7 +5,7 @@ module.exports = {
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'public'),
-    jsonpFunction: 'jsonpApp1Nav',
+    jsonpFunction: 'jsonpApp1Navbar',
   },
   module: {
     rules: [
@@ -19,13 +19,6 @@ module.exports = {
             // plugins: ["syntax-class-properties", "transform-class-properties"]
           },
         },
-      },
-      {
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader'
-        ]
       },
     ],
   },

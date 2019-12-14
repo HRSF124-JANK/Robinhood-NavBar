@@ -4,7 +4,7 @@ const WrapperApp = styled.div`
   width: 100%;
   height: 64px;
   position:fixed;
-  background: #1b1b1d;
+  background: ${props => props.backgroundColor};
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -15,24 +15,26 @@ const Logo = styled.div`
   margin-left: 50px;
   width: 100px;
   height: 40px;
-  background-image: url('navbar/img/robinhood-off-dark.png');
+  background-image: ${props => {
+    return props.backgroundColor === 'white' ? `url('navbar/img/robinhood-off-light.png')` : `url('navbar/img/robinhood-off-dark.png')`;
+  }};
   background-size: 33px 33px;
   background-position: 5% 50%;
   background-repeat: no-repeat;
-  outline: none !important;
   :hover {
-    background-image: url('navbar/img/robinhood-on-dark.png');
+    background-image: ${props => {
+      return props.backgroundColor === 'white' ? `url('navbar/img/robinhood-on-light.png')` : `url('navbar/img/robinhood-on-dark.png')`;
+    }};
     background-size: 33px 33px;
   background-position: 5% 50%;
   background-repeat: no-repeat;
-  outline: none !important;
   }
 `;
 
 const SearchContainer = styled.div`
   margin-right: 100px;
-  border: black;
-  background-color: #1b1b1d;
+  border: solid #f4f4f5 1px;
+  border-radius: 5px;
   :hover {
     color: white;
     box-shadow: 5px 5px 3px #1b1b1d;
@@ -41,9 +43,9 @@ const SearchContainer = styled.div`
 const SearchInput = styled.input`
   width: 478px;
   height: 36px;
-  background-color: #1b1b1d;
+  background-color: ${props => props.backgroundColor};
   border: none;
-  color:  #8c8c8e;
+  color:  #f4f4f5;
   background-image: url('navbar/img/search-off-dark.png');
   background-size: 20px 20px;
   background-position: 5% 50%;
@@ -52,25 +54,35 @@ const SearchInput = styled.input`
   
   :hover {
     ::placeholder {
-      color: white;
-    }
-    color: white;
-    background-image: url('navbar/img/search-on-dark.png');
+      color: ${props => {
+        return props.backgroundColor === 'white' ? 'black' : 'white';
+      }};
+    };
+    color: ${props => {
+      return props.backgroundColor === 'white' ? 'black' : 'white';
+    }};
+    background-image: ${props => {
+      return props.backgroundColor === 'white' ? `url('navbar/img/search-on-light.png')` : `url('navbar/img/search-on-dark.png')`;
+    }};
     background-size: 20px 20px;
     background-position: 5% 50%;
     background-repeat: no-repeat;
-    outline: none !important;
   }
   :focus {
     ::placeholder {
-      color: white;
-    }
-    color: white;
-    background-image: url('navbar/img/search-on-dark.png');
+      color: ${props => {
+        return props.backgroundColor === 'white' ? 'black' : 'white';
+      }};
+    };
+    color: ${props => {
+      return props.backgroundColor === 'white' ? 'black' : 'white';
+    }};
+    background-image: ${props => {
+      return props.backgroundColor === 'white' ? `url('navbar/img/search-on-light.png')` : `url('navbar/img/search-on-dark.png')`;
+    }};
     background-size: 20px 20px;
     background-position: 5% 50%;
     background-repeat: no-repeat;
-    outline: none !important;
   }
 `;
 
@@ -80,7 +92,9 @@ const TabsContainer = styled.div`
   margin-right: 35px;
 `;
 const Tab = styled.button`
-  color: white;
+  color: ${props => {
+    return props.backgroundColor === 'white' ? 'black' : 'white';
+  }};
   font-size: 13px;
   font-weight: bold;
   padding: 0;
